@@ -1,21 +1,27 @@
 /* *{border: 1px solid red} */
 
 body {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
     min-height: 100vh;
     font-family: 'Space Mono', monospace;
     background-color: #C5E4E7;
     margin: 0;
     -webkit-font-smoothing: antialiased;
+    box-sizing: content-box;
 }
 header {
     text-align: center;
     width: 100%;
-    margin: 20px auto 80px;
+    margin: 80px auto;
 }
-form {
+section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+form#tip-calculator {
     max-width: 920px;
     display: flex;
     background-color: #fff;
@@ -46,7 +52,7 @@ p, label {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.form-input input[type="text"] {
+.form-input input[type="number"] {
     width: 80%;
     background-color: #F4FAFA;
     border: 0;
@@ -61,12 +67,17 @@ p, label {
     padding: 0 18px 0 40px;
     margin-top: 7px;
 }
-.form-input input[type="text"]::placeholder {
+.form-input input[type="number"]::placeholder {
     color: #7F9C9F;
     opacity: .5;
 }
-.form-input input[type="text"]:focus {
+.form-input input[type="number"]:focus {
     outline-color:#26C0AB;
+}
+.form-input input[type="number"]::-webkit-outer-spin-button,
+.form-input input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .form-input input#bill {
     background-image: url(../img/icon-dollar.svg);
@@ -82,6 +93,10 @@ p, label {
     color:#E53935;
     font-weight: 700;
     padding-right: 30px;
+}
+
+.form-input input[type="number"].input-error:focus {
+    outline-color:#E53935;
 }
 
 /* ========== SELECT TIP BUTTONS ========== */
@@ -115,7 +130,7 @@ p, label {
     background-color: #26C0AB;
 }
 
-#select-tip-buttons input#custom-tip {
+input#custom-tip {
     font-family: 'Space Mono', monospace;
     color: #00494D;
     font-size: 24px;
@@ -127,16 +142,19 @@ p, label {
     border: none;
     border-radius: 6px;
 }
-#select-tip-buttons input#custom-tip::placeholder {
+input#custom-tip::-webkit-outer-spin-button,
+input#custom-tip::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input#custom-tip::placeholder {
     color: #5E7A7D;
 }
-#select-tip-buttons input#custom-tip:focus {
+input#custom-tip:focus {
     outline-color:#26C0AB;
 }
 
 /* ========== AMOUNT ========== */
-
-
 
 #amount {
     display: flex;
@@ -188,6 +206,65 @@ p, label {
 }
 
 
+/* ========== MEDIA QUERIES ========== */
 
+@media (max-width: 768px) {
+    #select-tip-buttons input[type="radio"] + label{
+        font-size: 20px;
+        height: 40px;
+        padding-top: 10px;
+    }
+    input#custom-tip {
+        font-size: 20px;
+        height: 40px;
+        padding: 5px;
+    }
+    #amount p.lg-number {
+        font-size: 28px;
+    }
+}
 
-
+@media (max-width: 414px) {
+    header {
+        text-align: center;
+        width: 100%;
+        margin: 30px auto;
+    }
+    form#tip-calculator {
+        flex-wrap: wrap;
+        padding: 28px;
+    }  
+    #inputs {
+        padding: 0;
+    }
+    .form-input {
+        margin-bottom: 30px;
+    }
+    #select-tip-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 16px 0 30px 0;
+    }
+    #select-tip-buttons input[type="radio"] + label{
+        width: calc(50% - 14px);
+        font-size: 24px;
+        height: 40px;
+        padding-top: 4px;
+    }
+    input#custom-tip {
+        width: calc(50% - 14px);
+        height: 40px;
+        padding: 2px;
+    }
+    #amount {
+        width: calc(100% - 28px);
+        padding: 24px;
+    }
+    #amount .amount-wrap {
+        margin-bottom: 20px;
+    }
+    #amount p.lg-number {
+        font-size: 32px;
+        line-height: 48px;
+    }
+}
