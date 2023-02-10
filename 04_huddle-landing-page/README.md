@@ -1,4 +1,4 @@
-# 02. Product preview card component
+# 04. Huddle landing page with single introductory section
 
 ## Overview
 
@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: [Preview Card](https://leopecina.github.io/doctype/04_huddle-landing-page/)
+- Live Site URL: [Huddle Landing Page](https://leopecina.github.io/doctype/04_huddle-landing-page/)
 
 ### Author
 

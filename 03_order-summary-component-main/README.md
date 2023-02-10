@@ -1,4 +1,4 @@
-# 02. Product preview card component
+# 03. Order Summary Card
 
 ## Overview
 
@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: [Preview Card](https://leopecina.github.io/doctype/03_order-summary-component-main/)
+- Live Site URL: [Order Summary Card](https://leopecina.github.io/doctype/03_order-summary-component-main/)
 
 ### Author
 
