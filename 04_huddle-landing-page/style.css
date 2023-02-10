@@ -1,0 +1,223 @@
+/* * {
+    border: 1px solid red;
+} */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    background-color: #674bb1;
+    background-image: url(img/bg-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    color: #ffffff;
+}
+
+header,
+main,
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1440px;
+    padding: 0 80px;
+    display: flex;
+}
+
+nav {
+    margin: 40px 0 40px;
+}
+nav img {
+    width: 200px;
+}
+
+main {
+    margin-top: 20px;
+}
+main div.illustration {
+    flex: 1.2;
+}
+main div.illustration img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+main div.register {
+    flex: .8;
+    padding: 30px 0 30px 40px;
+}
+
+.register h1 {
+    font-family: poppins, futura, Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+}
+.register p {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.6em;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.register button {
+    background-color: #fff;
+    color: #674bb1;
+    width: 200px;
+    height: 54px;
+    border-radius: 30px;
+    border: none;
+    font-family: poppins, futura, Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, .3);
+    transition: all .25s ease-out;
+}
+    .register button:hover {
+        background-color: #e980e7;
+        color: #fff;
+    }
+
+footer .container {
+    margin: 25px 0;
+    justify-content: flex-end;
+}
+footer i {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    padding: 9px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-left: 16px;
+    font-size: 16px;
+    transition: color .2s linear 100ms,
+                border .2s linear 100ms;
+}
+    footer i:hover {
+        color: #e980e7;
+        border-color: #e980e7;
+    }
+
+
+/* Responsive */
+
+@media screen and (max-width: 1200px) {
+
+    main div.register {
+        padding-top: 0;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    .register h1 {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-image: url(img/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 80px;
+    }
+
+    main div.container {
+        flex-wrap: wrap;
+    }
+    
+    main div.illustration {
+        flex: 100%;
+    }
+    main div.register {
+        flex: 100%;
+        padding: 0;
+        margin-top: 40px;
+    }
+    .register h1 {
+        font-size: 36px;
+        margin-top: 30px;
+    }
+    .register p  {
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+
+    nav img {
+        width: 180px;
+        margin-left: 30px;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    main div.container {
+        text-align: center;
+    }
+
+    main div.illustration {
+        padding: 0 30px;
+    }
+
+    main div.register {
+        padding: 0 30px;
+    }
+    .register h1 {
+        font-size: 36px;
+        margin-top: 30px;
+    }
+    .register p  {
+        font-size: 24px;
+    }
+    .register button {
+        height: 3.2em;
+        font-size: 18px;
+        width: 300px;
+        margin-top: 10px;
+    }
+
+    footer .container {
+        margin: 80px 0 60px;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+
+    .register button {
+        height: 3em;
+        width: 90%;
+        font-size: 18px;
+    }
+    .register h1 {
+        font-size: 32px;
+        margin-top: 20px;
+    }
+    .register p  {
+        font-size: 18px;
+    }
+
+}
